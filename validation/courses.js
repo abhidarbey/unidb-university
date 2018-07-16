@@ -13,7 +13,7 @@ module.exports = function validateCoursesInput(data) {
   }
 
   if (Validator.isEmpty(data.stream)) {
-    errors.stream = 'Stream field is required';
+    errors.stream = 'Field of study field is required';
   }
 
   return {

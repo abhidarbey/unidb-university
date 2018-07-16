@@ -4,12 +4,8 @@ const bodyParser = require('body-parser');
 const gravatar = require('gravatar');
 const passport = require('passport');
 
-const users = require('./routes/api/users');
-const profile = require('./routes/api/profile');
-const posts = require('./routes/api/posts');
-const university = require('./routes/api/university');
+const universities = require('./routes/api/universities');
 const universityProfile = require('./routes/api/universityProfile');
-
 const app = express();
 
 // Body parser middelware
@@ -32,11 +28,7 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
 
 // Use Routes
-app.use('/api/users', users);
-app.use('/api/profile', profile);
-app.use('/api/posts', posts);
-
-app.use('/api/university', university);
+app.use('/api/university', universities);
 app.use('/api/university/profile', universityProfile);
 
 const port = process.env.PORT || 5000;

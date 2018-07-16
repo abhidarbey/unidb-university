@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const UniversityProfileSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
-    ref: 'university'
+    ref: 'universities'
   },
   handle: {
     type: String,
@@ -18,11 +18,15 @@ const UniversityProfileSchema = new Schema({
   location: {
     type: String
   },
+  status: {
+    type: String,
+    required: true
+  },
   schools: {
     type: [String],
     required: true
   },
-  courses: [
+  course: [
     {
       degree: {
         type: String,
@@ -48,6 +52,9 @@ const UniversityProfileSchema = new Schema({
       type: String
     },
     linkedin: {
+      type: String
+    },
+    instagram: {
       type: String
     }
   },
