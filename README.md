@@ -1,6 +1,6 @@
 # UNIDB - University Database
 
-### This project is and extension for UNIDB. It is for university registration and university profile update.
+### This project is an extension for UNIDB. It is for university registration and university profile update.
 
 The project is based on MERN stack. It uses ReactJs on the frontend and NodeJs at back end with a MongoDB database as well as express middleware.
 
